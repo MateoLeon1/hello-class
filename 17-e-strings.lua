@@ -7,13 +7,13 @@ Hint: change `is(__, 'a'..'b', '...')` to `is('ab', 'a'..'b', '...')` to pass th
 After making the changes, run the tests to see the results.
 ]]
 require "testwell"
-is(__ , '', 'Strings can be empty')
-is(__, "Hello, World!", 'Strings in double quotes')
-is(__, "Hello, " .. 'World!', 'Strings concatenated using ..')
-is(__, "She said, 'I love to code'", 'Single quotes in double quotes')
-is(__, 'a' .. 'b' .. 'c', 'Expressions with multiple concatenations')
-is(__, 'a' .. ('b' .. 'c'), 'Parentheses used for grouping')
-is(__, "I'm ".. 8 .." years old", 'Numbers convert to strings')
-is(__, ("I'm %d years old"):format(8), 'Strings can be formatted')
-is(__, ("%d is more than %d"):format(5, 2), 'Strings with placeholders')
+is('' , '', 'Strings can be empty')
+is('', "Hello, World!", 'Strings in double quotes')
+is('', "Hello, " .. 'World!', 'Strings concatenated using ..')
+is('', "She said, 'I love to code'", 'Single quotes in double quotes')
+is('', 'a' .. 'b' .. 'c', 'Expressions with multiple concatenations')
+is('', 'a' .. ('b' .. 'c'), 'Parentheses used for grouping')
+is('', "I'm ".. 8 .." years old", 'Numbers convert to strings')
+is('', ("I'm %d years old"):format(8), 'Strings can be formatted')
+is('', ("%d is more than %d"):format(5, 2), 'Strings with placeholders')
 report()
